@@ -75,9 +75,9 @@ publishing {
 
   repositories {
     maven {
-      name = "OSSRH"
-      def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-      def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+      name = "github"
+      def releasesRepoUrl = "https://maven.pkg.github.com/gitu/protoc-gen-doc/"
+      def snapshotsRepoUrl = "https://maven.pkg.github.com/gitu/protoc-gen-doc/"
       url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
       credentials {
         username = System.getenv("MAVEN_USERNAME")
@@ -89,8 +89,7 @@ publishing {
 
 signing {
   def signingKey = project.getProperty('signingKey')
-  def signingPassword = project.getProperty('signingPassword')
-  useInMemoryPgpKeys(signingKey, signingPassword)
+  useInMemoryPgpKeys(signingKey)
   sign publishing.publications.maven
 }
 
