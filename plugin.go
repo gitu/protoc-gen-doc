@@ -21,6 +21,7 @@ type PluginOptions struct {
 	OutputFile      string
 	ExcludePatterns []*regexp.Regexp
 	SourceRelative  bool
+	PerFile         bool
 }
 
 // SupportedFeatures describes a flag setting for supported features.
@@ -51,7 +52,7 @@ func (p *Plugin) Generate(r *plugin_go.CodeGeneratorRequest) (*plugin_go.CodeGen
 	}
 
 	resp := new(plugin_go.CodeGeneratorResponse)
-	fdsGroup := groupProtosByDirectory(result, options.SourceRelative)
+	fdsGroup := groupProtosByDirectory(result, options.SourceRelative, options.PerFile)
 	for dir, fds := range fdsGroup {
 		template := NewTemplate(fds)
 
@@ -60,10 +61,17 @@ func (p *Plugin) Generate(r *plugin_go.CodeGeneratorRequest) (*plugin_go.CodeGen
 			return nil, err
 		}
 
-		resp.File = append(resp.File, &plugin_go.CodeGeneratorResponse_File{
-			Name:    proto.String(filepath.Join(dir, options.OutputFile)),
-			Content: proto.String(string(output)),
-		})
+		if options.PerFile {
+			resp.File = append(resp.File, &plugin_go.CodeGeneratorResponse_File{
+				Name:    proto.String(dir),
+				Content: proto.String(string(output)),
+			})
+		} else {
+			resp.File = append(resp.File, &plugin_go.CodeGeneratorResponse_File{
+				Name:    proto.String(filepath.Join(dir, options.OutputFile)),
+				Content: proto.String(string(output)),
+			})
+		}
 	}
 
 	resp.SupportedFeatures = proto.Uint64(SupportedFeatures)
@@ -71,13 +79,16 @@ func (p *Plugin) Generate(r *plugin_go.CodeGeneratorRequest) (*plugin_go.CodeGen
 	return resp, nil
 }
 
-func groupProtosByDirectory(fds []*protokit.FileDescriptor, sourceRelative bool) map[string][]*protokit.FileDescriptor {
+func groupProtosByDirectory(fds []*protokit.FileDescriptor, sourceRelative bool, perFile bool) map[string][]*protokit.FileDescriptor {
 	fdsGroup := make(map[string][]*protokit.FileDescriptor)
 
 	for _, fd := range fds {
 		dir := ""
 		if sourceRelative {
 			dir, _ = filepath.Split(fd.GetName())
+		}
+		if perFile {
+			dir = fd.GetName()
 		}
 		if dir == "" {
 			dir = "./"
@@ -115,6 +126,7 @@ func ParseOptions(req *plugin_go.CodeGeneratorRequest) (*PluginOptions, error) {
 		TemplateFile:   "",
 		OutputFile:     "index.html",
 		SourceRelative: false,
+		PerFile:        false,
 	}
 
 	params := req.GetParameter()
@@ -148,10 +160,17 @@ func ParseOptions(req *plugin_go.CodeGeneratorRequest) (*PluginOptions, error) {
 	options.OutputFile = path.Base(parts[1])
 	if len(parts) > 2 {
 		switch parts[2] {
+		case "per_file":
+			options.PerFile = true
+			break
 		case "source_relative":
 			options.SourceRelative = true
+			options.PerFile = false
+			break
 		case "default":
 			options.SourceRelative = false
+			options.PerFile = false
+			break
 		default:
 			return nil, fmt.Errorf("Invalid parameter: %s", params)
 		}

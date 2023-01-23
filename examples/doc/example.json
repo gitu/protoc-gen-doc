@@ -31,7 +31,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "customer_id",
@@ -43,7 +44,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "status",
@@ -55,7 +57,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "confirmation_sent",
@@ -67,7 +70,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 4
             },
             {
               "name": "payment_received",
@@ -79,7 +83,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 5
             },
             {
               "name": "color_preference",
@@ -92,6 +97,7 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": "",
+              "number": 6,
               "options": {
                 "deprecated": true
               }
@@ -118,7 +124,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "description",
@@ -131,6 +138,7 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": "",
+              "number": 2,
               "options": {
                 "validator.field": [
                   {
@@ -166,7 +174,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             }
           ]
         },
@@ -259,7 +268,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "address_line_2",
@@ -271,7 +281,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "address_line_3",
@@ -283,7 +294,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "town",
@@ -295,7 +307,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 4
             },
             {
               "name": "county",
@@ -307,7 +320,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 5
             },
             {
               "name": "country",
@@ -319,7 +333,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 6
             }
           ]
         },
@@ -343,7 +358,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "first_name",
@@ -355,7 +371,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "last_name",
@@ -367,7 +384,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "details",
@@ -379,7 +397,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 4
             },
             {
               "name": "email_address",
@@ -391,7 +410,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 5
             },
             {
               "name": "phone_number",
@@ -403,7 +423,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 6
             },
             {
               "name": "mail_addresses",
@@ -415,7 +436,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 7
             }
           ]
         }
@@ -488,7 +510,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "code",
@@ -500,7 +523,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "details",
@@ -512,7 +536,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "category",
@@ -524,7 +549,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": "CATEGORY_EXTERNAL"
+              "defaultValue": "CATEGORY_EXTERNAL",
+              "number": 4
             }
           ]
         },
@@ -548,7 +574,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "model_code",
@@ -560,7 +587,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "model_name",
@@ -572,7 +600,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "daily_hire_rate_dollars",
@@ -584,7 +613,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 4
             },
             {
               "name": "daily_hire_rate_cents",
@@ -596,7 +626,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 5
             }
           ]
         },
@@ -639,7 +670,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "model",
@@ -651,7 +683,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             },
             {
               "name": "reg_number",
@@ -663,7 +696,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 3
             },
             {
               "name": "mileage",
@@ -675,7 +709,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 4
             },
             {
               "name": "category",
@@ -687,7 +722,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 5
             },
             {
               "name": "daily_hire_rate_dollars",
@@ -699,7 +735,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": "50"
+              "defaultValue": "50",
+              "number": 6
             },
             {
               "name": "daily_hire_rate_cents",
@@ -711,7 +748,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 7
             }
           ]
         },
@@ -735,7 +773,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 1
             },
             {
               "name": "description",
@@ -747,7 +786,8 @@
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
-              "defaultValue": ""
+              "defaultValue": "",
+              "number": 2
             }
           ]
         }
